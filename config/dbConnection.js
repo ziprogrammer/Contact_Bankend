@@ -8,6 +8,7 @@ const connectDb = async () => {
       connect.connection.host,
       connect.connection.name
     );
+    mongoose.set('strictQuery', true);
   } catch (err) {
     console.log(err);
     process.exit(1);
